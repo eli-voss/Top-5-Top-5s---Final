@@ -1,0 +1,153 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+    background-image: linear-gradient(#b0bccb, #ddecff);
+    color: #2a2725;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #f1e4d8;
+    padding: 20px;
+    border-bottom: 2px solid #b56e4f;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header h2{
+    font-size: 2em;
+}
+
+main {
+    position:relative;
+}
+
+.movies_shows, .sports, .music, .pets, .games {
+    background-color: #f1e4d8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(119, 119, 119);
+    border: 2px solid #b56e4f;
+}
+
+.movies_shows:hover, .sports:hover, .music:hover, .pets:hover, .games:hover, .home:hover {
+    background-color: #e6d7c2;
+    transition: background-color 0.3s ease;
+}
+
+.grid-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+.grid-bottom {
+    grid-template-columns: 0.325fr 0.325fr;
+    margin-top: 2%;
+}
+
+.grid-top,
+.grid-bottom {
+    display:grid;
+    column-gap: 2%;
+    row-gap: 2%;
+    justify-content: center; /*had to look this up to center the bottom part of the grid*/
+    align-items:start;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#b56e4f;
+    padding-bottom:25px;
+}
+
+.addon {
+    font-size: 1em;
+    color: #5a544f;
+    margin-top: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.1s ease, max-height 0.1s ease; /*had to play around with this for a while to get it to work, right, including dealing with align-items:Start in .grid-top, .grid-bottom.*/
+}
+
+.desc {
+    text-align:center;
+    padding:10px;
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom:#b56e4f 2px solid;
+}
+
+.home {
+    position: sticky;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    left:20px;
+    bottom:20px;
+    background-color: #f1e4d8;
+    border: 2px solid #b56e4f;
+    box-shadow: 0 4px 8px rgb(119, 119, 119);
+    display:inline-block;
+}
+
+.home a {
+    display: sticky;
+    width: 74px;
+    height: 100%;
+    padding: 0;
+}
+
+.home-icon {
+    display: sticky;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #5a544f;
+    background-color: #f1e4d8;
+    border-top: 2px solid #b56e4f;
+}
+
+footer a {
+    color: #5a544f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #5a544f;
+}
+
+.movies_shows:hover .addon, .sports:hover .addon, .music:hover .addon, .games:hover .addon, .pets:hover .addon {
+    display: block;
+    opacity: 1;
+    max-height: 300px;
+}

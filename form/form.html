@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Top 5s - Submit Your Favorites!</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Share Your Favorites!</h2>
+        <form action="mailto:ecv16@pitt.edu" method="POST" enctype="text/plain"> <!--had to look this up to figure out how to submit a form because i couldn't think of any other way to submit a form without making a whole new website for it-->
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="Games">Games</option>
+                <option value="Movies">Movies</option>
+                <option value="Shows">Shows</option>
+                <option value="Sports">Sports</option>
+                <option value="Music">Music</option>
+                <option value="Pets">Pets</option>
+            </select>
+
+            <label for="favorite">Favorite (Title or Name)</label>
+            <input type="text" id="favorite" name="favorite" required placeholder="e.g., Minecraft, Inception, Border Collie">
+
+            <label for="genre">Genre/Type</label>
+            <input type="text" id="genre" name="genre" placeholder="e.g., FPS, Drama, Pop, Soccer">
+
+            <label for="reason">Why is it your favorite?</label>
+            <textarea id="reason" name="reason" required placeholder="Tell us why you love it!"></textarea>
+
+            <label for="rating">How do you rate it? (1-10)</label>
+            <input type="text" id="rating" name="rating" min="1" max="10" placeholder="e.g., 9" required>
+
+            <label for="yourname">Your Name (optional)</label>
+            <input type="text" id="yourname" name="yourname" placeholder="Your name">
+
+            <label for="email">Your Email (optional, if you'd like a reply!)</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer-link">
+            <a href="../index.html">&#8592; Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>
